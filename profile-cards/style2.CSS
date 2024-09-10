@@ -1,0 +1,147 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative; /* Ensure body is positioned relative to the canvas */
+}
+
+/* Granim Canvas for Gradient Background */
+.canvas-interactive-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.canvas-interactive-wrapper canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Centering the Profile Card */
+.cta-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height to center vertically */
+    position: relative; /* Make sure cta-wrapper respects the positioning */
+}
+
+.main-card {
+    width: 350px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    z-index: 2; /* Keeps card above the canvas */
+}
+
+/* Top Section for Profile Picture */
+.top-section {
+    background-color: transparent;
+    padding: 50px 0;
+    position: relative;
+    background-color: #3b82f6;
+
+
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid rgb(48, 240, 208);
+    position: absolute;
+    /* top: 50%; */
+    margin-top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Info Section Styling */
+.info-section {
+    padding: 80px 20px 20px 20px;
+}
+
+.name {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.description {
+    color: #888;
+    margin-bottom: 15px;
+}
+
+/* Social Media Icons Styling */
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: #888;
+    font-size: 30px; /* Increased font size for larger icons */
+    margin: 0 15px; /* Adjusted margin for spacing */
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #3b82f6;
+}
+
+/* Action Button Styling */
+.action-buttons {
+    margin: 20px 0;
+}
+
+.contact-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 20px;
+    border: none;
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    background-color: #2563eb;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 400px) {
+    .main-card {
+        width: 90%;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
